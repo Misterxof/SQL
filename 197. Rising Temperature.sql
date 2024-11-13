@@ -1,0 +1,1 @@
+select w.id from Weather as w where exists (select 1 from Weather as y where w.temperature > y.temperature and w.recordDate = y.recordDate + interval 1 day)
